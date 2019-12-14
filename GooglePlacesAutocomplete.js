@@ -104,9 +104,9 @@ export default class GooglePlacesAutocomplete extends Component {
         res.unshift({
           description: `${
           <Image
-          style={[this.props.suppressDefaultStyles ? {} : defaultStyles.powered, this.props.styles.powered]}
+          style={this.props.iconStyle}
           resizeMode='contain'
-          source={require('./images/location-pin.png')}
+          source={require('./images/location-pin.svg')}
         />} ${this.props.currentLocationLabel}`,
           isCurrentLocation: true,
         });
@@ -766,6 +766,7 @@ GooglePlacesAutocomplete.propTypes = {
   GoogleReverseGeocodingQuery: PropTypes.object,
   GooglePlacesSearchQuery: PropTypes.object,
   GooglePlacesDetailsQuery: PropTypes.object,
+  iconStyle: PropTypes.object,
   styles: PropTypes.object,
   textInputProps: PropTypes.object,
   enablePoweredByContainer: PropTypes.bool,
@@ -834,6 +835,7 @@ GooglePlacesAutocomplete.defaultProps = {
   enableEmptySections: true,
   listViewDisplayed: 'auto',
   debounce: 0,
+  iconStyle:{},
   textInputHide: false,
   suppressDefaultStyles: false,
   numberOfLines: 1,
