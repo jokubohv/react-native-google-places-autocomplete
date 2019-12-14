@@ -102,7 +102,7 @@ export default class GooglePlacesAutocomplete extends Component {
 
       if (this.props.currentLocation === true) {
         res.unshift({
-          description: `${this.props.locationIcon} ${this.props.currentLocationLabel}`,
+          description: `${this.props.locationIcon()} ${this.props.currentLocationLabel}`,
           isCurrentLocation: true,
         });
       }
