@@ -106,7 +106,7 @@ export default class GooglePlacesAutocomplete extends Component {
           <Image
           style={this.props.iconStyle}
           resizeMode='contain'
-          source={require('./images/location-pin.svg')}
+          source={require('./images/location-pin.png')}
         />} ${this.props.currentLocationLabel}`,
           isCurrentLocation: true,
         });
