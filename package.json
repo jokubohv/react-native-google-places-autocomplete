@@ -1,6 +1,6 @@
 {
   "name": "react-native-places-autocomplete-mane",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "description": "Customizable Google Places autocomplete component for iOS and Android React-Native apps",
   "main": "GooglePlacesAutocomplete.js",
   "scripts": {
