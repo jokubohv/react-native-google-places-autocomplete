@@ -102,7 +102,7 @@ export default class GooglePlacesAutocomplete extends Component {
 
       if (this.props.currentLocation === true) {
         res.unshift({
-          description: this.props.currentLocationLabel,
+          description: `${this.props.locationIcon} ${this.props.currentLocationLabel}`,
           isCurrentLocation: true,
         });
       }
@@ -718,7 +718,7 @@ export default class GooglePlacesAutocomplete extends Component {
               keyboardAppearance={this.props.keyboardAppearance}
               autoFocus={this.props.autoFocus}
               style={[this.props.suppressDefaultStyles ? {} : defaultStyles.textInput, this.props.styles.textInput]}
-              value={this.state.text}
+              value={this.props.currentAddress || this.props.text}
               placeholder={this.props.placeholder}
               onSubmitEditing={this.props.onSubmitEditing}
               placeholderTextColor={this.props.placeholderTextColor}
@@ -767,6 +767,7 @@ GooglePlacesAutocomplete.propTypes = {
   predefinedPlaces: PropTypes.array,
   currentLocation: PropTypes.bool,
   currentLocationLabel: PropTypes.string,
+  currentAddress: PropTypes.string,
   nearbyPlacesAPI: PropTypes.string,
   enableHighAccuracyLocation: PropTypes.bool,
   filterReverseGeocodingByTypes: PropTypes.array,
